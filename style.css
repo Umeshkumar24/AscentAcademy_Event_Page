@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(250, 240, 226);
+}
+h2 {
+    color: darkcyan;
+}
+
+h2:hover {
+    text-shadow: 2px 2px rgb(213, 198, 198);
+}
+.card:hover{
+    box-shadow: 10px 10px rgb(243, 237, 237);
+    width:22em;
+}
+.card{
+    background-color: rgb(198, 227, 237);
+}
+div {
+    background-color: rgb(247, 247, 236);
+}
+nav ul li:hover{
+    background-color: rgb(233, 226, 226);
+    color: aliceblue;
+}
+
+

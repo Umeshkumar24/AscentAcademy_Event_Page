@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="https://lh3.googleusercontent.com/a-/ACB-R5TcaNdvCZ5_iQgnkygwQSXH9cBEUuPKjJDpJu44=s80-p" type="image/xicon">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: lightblue;
+        }
+
+        #signup {
+            height: 60vh;
+            width: 40vw;
+            margin-top: 20vh; 
+            padding: 13px;
+            padding-left: 20px;
+            border: 4px groove rgb(27, 228, 168);
+            justify-content: center;
+            align-content: center;
+            background: linear-gradient(rgb(140, 209, 231), rgb(255, 166, 180));
+        }
+
+        h3 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        input,
+        select {
+            background-color: rgb(168, 229, 249);
+            border: 0px;
+            border-bottom: 2px solid dodgerblue;
+            text-align: center;
+        }
+
+        input:hover {
+            border-bottom: 3px solid dodgerblue;
+        }
+
+        label {
+            margin-right: 2vw;
+            color: rgb(79, 4, 125);
+        }
+
+        button {
+            color: darkblue;
+            padding: 2px;
+            border: 3px groove dodgerblue;
+            border-radius: 7px;
+            background-color: lightblue;
+        }
+
+        button:hover {
+            background-color: rgb(80, 187, 223);
+            color: rgb(1, 1, 94);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script>
+        function validateForm() {
+            var a = document.forms["form1"]["fname"].value;
+            var b = document.forms["form1"]["email"].value;
+            var c = document.forms["form1"]["lname"].value;
+            var d = document.forms["form1"]["gender"].value;
+            if (a == "" || a == null && b == "" || b == null && c == "" || c == null && d == "" || d == null) {
+                alert("Please fill all the required data fields"); 
+            }
+            else {
+                alert("Sign Up successful")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="form1" onsubmit="return validate()">
+        <center>
+        
+        <div id="signup">
+            <img src="https://lh3.googleusercontent.com/a-/ACB-R5TcaNdvCZ5_iQgnkygwQSXH9cBEUuPKjJDpJu44=s80-p" alt="" style="height:60px;width:60px;"><br>
+            <label for="firstname">First Name</label><input type="text" id="fname" placeholder="firstName"><br><br>
+            <label for="lastname">Last Name</label><input type="text" id="lname" placeholder="lastName"><br><br>
+            <label for="email" style="margin-right: 4vw;">E Mail</label><input type="email" id="email"
+                placeholder="abc@gmail.com"> <br><br>
+            <label for="gender">Gender</label><select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="custom">Custom</option>
+            </select><br><br>
+            <center><button type="submit" onclick="validateForm()"><b>Register</b></button></center>
+        </div>
+    </center>
+    </form>
+
+</body>
+
+</html>
